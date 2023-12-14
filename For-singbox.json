@@ -108,16 +108,14 @@
       "outbounds": [
         "auto",
         "direct",
-        "2222.bwvd9gh5-dcb.workers.dev-HTTP", // 修改名称1
-        "2222.bwvd9gh5-dcb.workers.dev-HTTP-cdn-all.xn--b6gac.eu.org-EDtunnel" // 修改名称2
+        "US" // 修改名称2
       ]
     },
     {
       "tag": "auto",
       "type": "urltest",
       "outbounds": [
-        "2222.bwvd9gh5-dcb.workers.dev-HTTP", // 修改名称1
-        "2222.bwvd9gh5-dcb.workers.dev-HTTP-cdn-all.xn--b6gac.eu.org-EDtunnel" // 修改名称2
+        "US" // 修改名称2
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "1m",
@@ -135,40 +133,26 @@
       "type": "block",
       "tag": "block"
     },
-    {
-      "tag": "2222.bwvd9gh5-dcb.workers.dev-HTTP", // 修改名称1
+ {
+      "tag": "US", // 修改名称1
       "type": "vless",
-      "server": "shopify.com", //优选ip或 域名
-      "server_port": 80,
-      "uuid": "6c00e3f1-b0ec-425b-a5b8-3f786a50e402", //修改uuid
+      "server": "11.zlwq1983.beauty", //优选ip或 域名
+      "server_port": 8443,
+      "uuid": "25370b12-6f6e-431f-977d-0bbc753b8d76", //修改uuid
       "packet_encoding": "xudp",
       "transport": {
         "type": "ws",
         "path": "/",
         "headers": {
-          "Host": "2222.bwvd9gh5-dcb.workers.dev" //修改成自己host
+        "Host": "us.zlwq1983.beauty" //修改成自己host
         },
         "early_data_header_name": "Sec-WebSocket-Protocol",
         "max_early_data": 2048
-      }
-    },
-    {
-      "tag": "2222.bwvd9gh5-dcb.workers.dev-HTTP-cdn-all.xn--b6gac.eu.org-EDtunnel", // 修改名称2
-      "type": "vless",
-      "server": "104.18.9.215", //优选ip或 域名
-      "server_port": 80,
-      "uuid": "6c00e3f1-b0ec-425b-a5b8-3f786a50e402", //修改uuid
-      "packet_encoding": "xudp",
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "2222.bwvd9gh5-dcb.workers.dev" //修改成自己host
-        },
-        "early_data_header_name": "Sec-WebSocket-Protocol",
-        "max_early_data": 2048
-      }
-    }
+      }，
+        "tls": {
+                "enabled": true,
+                "server_name": "us.zlwq1983.beauty"
+        }
   ],
   "route": {
     "auto_detect_interface": true,
